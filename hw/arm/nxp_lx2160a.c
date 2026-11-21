@@ -11,12 +11,15 @@
 #include "hw/arm/nxp_lx2160a.h"
 #include "qemu/module.h"
 
-static void versal_class_init(ObjectClass *klass, const void *data) {}
+static void lx2160a_class_init(ObjectClass *class, const void *data) {
+    MachineClass *mc = MACHINE_CLASS(class);
+    mc->desc = "NXP LX2160A";
+}
 
 static const TypeInfo lx2160a_info = {
-    .name = NXP_LX2160A,
-    .parent = TYPE_NXP_LX2160A_BASE,
-    .class_init = versal_class_init,
+    .name = MACHINE_TYPE_NAME(NXP_LX2160A),
+    .parent = TYPE_MACHINE,
+    .class_init = lx2160a_class_init,
 };
 
 static void lx2160a_register_types(void) {

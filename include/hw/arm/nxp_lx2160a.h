@@ -13,8 +13,8 @@
 
 #include "hw/core/boards.h"
 
-#define TYPE_NXP_LX2160A_BASE "lx2160a-base"
-OBJECT_DECLARE_TYPE(LX2160A, LX2160AClass, NXP_LX2160A_BASE)
+#define TYPE_NXP_LX2160A "lx2160a"
+OBJECT_DECLARE_TYPE(LX2160A, LX2160AClass, NXP_LX2160A)
 
 struct LX2160A {
     MachineState parent;
