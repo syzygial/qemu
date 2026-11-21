@@ -774,3 +774,8 @@ config AXIADO_EVK
     default y
     depends on TCG && ARM
     select AXIADO_SOC
+
+config NXP_LX2160A
+    bool
+    default y
+    depends on ARM
